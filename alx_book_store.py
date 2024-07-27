@@ -5,7 +5,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="Do!mybest2121",
-    database="Do!mybest2121"
+    database="alx_book_store"
 )
 
 print(mydb.get_server_info())
