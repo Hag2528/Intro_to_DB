@@ -19,10 +19,17 @@ mycursor=mydb.cursor()
 #     mydb.commit()
 #     print("Record SuccessFully")
 # tableinsert(1,"kebe",1)
-def books(book_id,title,price,publication_date,author_id):
-    query="INSERT INTO Books(book_id,title,price,publication_date,author_id)values(%s,%s,%s,%s,%s)"
-    values=(book_id,title,price,publication_date,author_id)
-    mycursor.execute(query,values)
+# def books(book_id,title,price,publication_date,author_id):
+#     query="INSERT INTO Books(book_id,title,price,publication_date,author_id)values(%s,%s,%s,%s,%s)"
+#     values=(book_id,title,price,publication_date,author_id)
+#     mycursor.execute(query,values)
+#     mydb.commit()
+#     print("Successfully inserted into Book table")
+# books(1,"Advanced SWE","100","2024-07-26","1")
+def orders(Order_id,customer_id,order_date):
+    query1="INSERT INTO Books(order_id,customer_id,order_date)values(%s,%s,%s)"
+    values=(Order_id,customer_id,order_date)
+    mycursor.execute(query1,values)
     mydb.commit()
-    print("Successfully inserted into Book table")
-books(1,"Advanced SWE","100,2024-07-26",1)
+    print("Successfully inserted into Orders table")
+orders(1,1,"2024-07-26")
