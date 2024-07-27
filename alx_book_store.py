@@ -26,9 +26,9 @@ mycursor=mydb.cursor()
 #     mydb.commit()
 #     print("Successfully inserted into Book table")
 # books(1,"Advanced SWE","100","2024-07-26","1")
-def orders(Order_id,customer_id,order_date):
+def orders(order_id,customer_id,order_date):
     query1="INSERT INTO Books(order_id,customer_id,order_date)values(%s,%s,%s)"
-    values=(Order_id,customer_id,order_date)
+    values=(order_id,customer_id,order_date)
     mycursor.execute(query1,values)
     mydb.commit()
     print("Successfully inserted into Orders table")
