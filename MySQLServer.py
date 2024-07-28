@@ -4,7 +4,7 @@ def create_database(db_name="alx_book_store", host="localhost", user="root", pas
     connection = mysql.connector.connect(host=host, user=user, password=password)
     cursor = connection.cursor()
   
-    sql = f"CREATE DATABASE IF NOT EXISTS {alx_book_store}"
+    sql = CREATE DATABASE IF NOT EXISTS alx_book_store;
     cursor.execute(sql)
 
     connection.commit()
